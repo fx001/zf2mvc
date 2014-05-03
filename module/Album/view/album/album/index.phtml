@@ -1,0 +1,31 @@
+<?php
+/**
+ * Kittencup (http://www.kittencup.com/)
+ * @date 2014 14-4-20 上午9:11
+ */
+
+?>
+<p>
+    <a href="<?=$this->url('album', array('action'=>'add'));?>">Add new album</a>
+</p>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>&nbsp;</th>
+    </tr>
+    <?php foreach($albumResultSet as $albumModel):?>
+        <tr>
+            <td><?=$albumModel->id;?></td>
+            <td><?=$albumModel->title;?></td>
+            <td><?=$albumModel->artist;?></td>
+            <td>
+                <a href="<?=$this->url('album',array('action'=>'edit','id'=>$albumModel->id));?>">Edit</a>
+                <a href="<?=$this->url('album',array('action'=>'del','id'=>$albumModel->id));?>">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach;?>
+
+
+</table>

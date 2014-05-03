@@ -1,0 +1,26 @@
+<?php
+/**
+ * Kittencup (http://www.kittencup.com/)
+ * @date 2014 14-4-26 上午10:41
+ */
+?>
+<?=$this->doctype();?>
+<html>
+    <head>
+        <?php
+            echo $this->headMeta()->setCharset('utf-8')->appendName('keyword','xxx');
+        ;?>
+
+        <?php
+            echo $this->headLink()->prependStylesheet('aaaaa.css');
+        ?>
+        <?php
+            echo $this->headStyle()->appendStyle('.a{color:red}');
+        ?>
+    </head>
+    <body>
+
+        <?=$this->content;?>
+    </body>
+</html>
+

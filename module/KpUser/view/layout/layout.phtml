@@ -1,0 +1,23 @@
+<?php
+/**
+ * Kittencup (http://www.kittencup.com/)
+ * @date 2014 14-4-26 下午1:30
+ */
+
+?>
+<?=$this->doctype();?>
+
+<html>
+    <head>
+        <?=$this->headMeta()->setCharset('utf-8');?>
+
+        <?=$this->headLink()->appendStylesheet($this->basePath() .'/vendor/bootstrap3/css/bootstrap.min.css');?>
+    </head>
+    <body>
+
+        <div class="container">
+            <?=$this->content;?>
+        </div>
+
+    </body>
+</html>
